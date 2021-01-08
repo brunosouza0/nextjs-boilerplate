@@ -1,5 +1,9 @@
 import Head from 'next/head'
 
+import { ThemeProvider } from 'styled-components'
+import theme from 'styles/theme'
+import GlobalStyle from 'styles/global'
+
 function MyApp({ Component, pageProps }) {
   return (
     <>
@@ -12,9 +16,11 @@ function MyApp({ Component, pageProps }) {
           name="description"
           content="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
         />
-        <html lang="pt-BR" />
       </Head>
-      <Component {...pageProps} />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Component {...pageProps} />
+      </ThemeProvider>
     </>
   )
 }
