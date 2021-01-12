@@ -1,6 +1,10 @@
 import { createGlobalStyle, css } from 'styled-components'
 
-const GlobalStyle = createGlobalStyle`
+type GlobalStyleProps = {
+  removeBg?: boolean
+}
+
+const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
   @font-face {
     font-family: 'Poppins';
     font-style: normal;
@@ -43,10 +47,13 @@ const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    ${({ theme }) => css`
+    ${({ theme, removeBg }) => css`
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
-      background-color: ${theme.colors.mainBg};
+      ${!removeBg &&
+      css`
+        background-color: ${theme.colors.mainBg};
+      `}
     `}
   }
 `
