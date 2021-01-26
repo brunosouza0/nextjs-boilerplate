@@ -3,7 +3,25 @@
   "plugins": [
     [
       "babel-plugin-styled-components",
-      { "ssr": true, "fileName": false }
+      {
+        "ssr": true,
+        "displayName": true,
+        "fileName": false
+      }
     ]
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        [
+          "babel-plugin-styled-components",
+          {
+            "ssr": false,
+            "displayName": false,
+            "fileName": false
+          }
+        ]
+      ]
+    }
+  }
 }
