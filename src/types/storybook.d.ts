@@ -15,6 +15,7 @@ type Types =
   | 'text'
   | 'color'
   | 'date'
+  | false
 
 declare module '@storybook/addons' {
   export interface Parameters {
