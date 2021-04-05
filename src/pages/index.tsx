@@ -1,10 +1,5 @@
-import styled, { css } from 'styled-components'
+import HomeTemplate from 'templates/Home'
 
-const Title = styled.h1`
-  ${({ theme }) => css`
-    color: ${theme.colors.white};
-  `}
-`
-const Index = () => <Title>Home</Title>
+const Home = () => <HomeTemplate />
 
-export default Index
+export default Home

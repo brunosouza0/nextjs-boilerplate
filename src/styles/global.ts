@@ -1,7 +1,13 @@
-import { createGlobalStyle, css } from 'styled-components'
+import { createGlobalStyle, css, DefaultTheme } from 'styled-components'
 
 type GlobalStyleProps = {
   removeBg?: boolean
+}
+
+const globalStyleModifiers = {
+  bg: (theme: DefaultTheme) => css`
+    background-color: ${theme.colors.mainBg};
+  `
 }
 
 const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
@@ -50,10 +56,7 @@ const GlobalStyle = createGlobalStyle<GlobalStyleProps>`
     ${({ theme, removeBg }) => css`
       font-family: ${theme.font.family};
       font-size: ${theme.font.sizes.medium};
-      ${!removeBg &&
-      css`
-        background-color: ${theme.colors.mainBg};
-      `}
+      ${!removeBg && globalStyleModifiers.bg(theme)}
     `}
   }
 `

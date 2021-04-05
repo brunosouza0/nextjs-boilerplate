@@ -1,0 +1,31 @@
+import { NextSeo } from 'next-seo'
+
+import * as S from './styles'
+
+export type {{pascalCase name}}TemplateProps = {}
+
+const {{pascalCase name}}Template = ({}: {{pascalCase name}}Props) => (
+  <>
+    <NextSeo
+      title="Title"
+      description="Description"
+      canonical="https://www.canonical.ie/"
+      openGraph=\{{
+        url: 'https://www.canonical.ie/',
+        title: 'Open Graph Title',
+        description: 'Open Graph Description',
+        images: [
+          {
+            url: 'https://www.example.ie/og-image-01.jpg',
+            width: 800,
+            height: 600,
+            alt: 'Og Image Alt',
+          }
+        ]
+      }}
+    />
+    {{pascalCase name}}
+  </>
+)
+
+export default {{pascalCase name}}Template
