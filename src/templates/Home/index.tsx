@@ -7,9 +7,9 @@ const HomeTemplate = () => (
     <NextSeo
       title="Next.js Boilerplate"
       description="A simple project starter to work with TypeScript, React, NextJS and Styled Components"
-      canonical="https://www.canonical.ie/"
+      canonical={`${process.env.NEXT_PUBLIC_SITE_URL}`}
       openGraph={{
-        url: 'https://www.canonical.ie/',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
         title: 'Next.js Boilerplate',
         description: 'A simple project starter to work with TypeScript, React, NextJS and Styled Components',
         images: [

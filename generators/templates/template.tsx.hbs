@@ -9,9 +9,9 @@ const {{pascalCase name}}Template = ({}: {{pascalCase name}}Props) => (
     <NextSeo
       title="Title"
       description="Description"
-      canonical="https://www.canonical.ie/"
+      canonical={`${process.env.NEXT_PUBLIC_SITE_URL}`}
       openGraph=\{{
-        url: 'https://www.canonical.ie/',
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}`,
         title: 'Open Graph Title',
         description: 'Open Graph Description',
         images: [

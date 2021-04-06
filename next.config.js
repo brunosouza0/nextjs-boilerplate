@@ -8,6 +8,6 @@ module.exports = withPWA({
     disable: !isProd
   },
   images: {
-    domains: []
+    domains: [process.env.IMAGES_DOMAIN]
   }
 })
