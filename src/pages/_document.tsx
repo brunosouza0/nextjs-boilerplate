@@ -30,7 +30,16 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="pt-BR">
-        <Head />
+        <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+            rel="stylesheet"
+          />
+          <link rel="shortcut icon" href="/img/icon-512.png" />
+          <link rel="apple-touch-icon" href="/img/icon-512.png" />
+          <link rel="manifest" href="/manifest.json" />
+        </Head>
         <body>
           <Main />
           <NextScript />
