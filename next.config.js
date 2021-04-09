@@ -6,8 +6,5 @@ module.exports = withPWA({
   pwa: {
     dest: 'public',
     disable: !isProd
-  },
-  images: {
-    domains: [process.env.IMAGES_DOMAIN]
   }
 })
