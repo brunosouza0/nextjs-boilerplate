@@ -33,15 +33,37 @@ export default class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-            rel="stylesheet"
-          />
           <link rel="shortcut icon" href="/img/icon-512.png" />
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content={theme.colors.primary} />
+          <style
+            dangerouslySetInnerHTML={{
+              __html: `
+                @font-face {
+                  font-family: 'Poppins';
+                  font-style: normal;
+                  font-weight: 300;
+                  src: url('/fonts/poppins-v15-latin-300.woff2') format('woff2');
+                  font-display: swap;
+                }
+                @font-face {
+                  font-family: 'Poppins';
+                  font-style: normal;
+                  font-weight: 400;
+                  src: url('/fonts/poppins-v15-latin-regular.woff2') format('woff2');
+                  font-display: swap;
+                }
+                @font-face {
+                  font-family: 'Poppins';
+                  font-style: normal;
+                  font-weight: 600;
+                  src: url('/fonts/poppins-v15-latin-600.woff2') format('woff2');
+                  font-display: swap;
+                }
+              `
+            }}
+          />
         </Head>
         <body>
           <Main />
