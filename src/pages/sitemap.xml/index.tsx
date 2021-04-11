@@ -13,4 +13,6 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-empty-function
-export default () => {}
+const siteMap = () => {}
+
+export default siteMap
