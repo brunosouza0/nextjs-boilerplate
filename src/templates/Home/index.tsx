@@ -14,10 +14,10 @@ const HomeTemplate = () => (
         description: 'A simple project starter to work with TypeScript, React, NextJS and Styled Components',
         images: [
           {
-            url: 'https://www.example.ie/og-image-01.jpg',
-            width: 800,
-            height: 600,
-            alt: 'Og Image Alt'
+            url: `${process.env.NEXT_PUBLIC_SITE_URL}/img/icon-512.png`,
+            width: 512,
+            height: 512,
+            alt: 'react logo'
           }
         ]
       }}
