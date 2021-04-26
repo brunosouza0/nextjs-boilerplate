@@ -23,12 +23,6 @@ const buttonModifiers = {
     font-size: ${theme.font.sizes.medium};
     padding: ${theme.spacings.xxsmall} ${theme.spacings.xlarge};
   `,
-  color: (theme: DefaultTheme, color: 'black' | 'white') => css`
-    color: ${theme.colors[color]};
-  `,
-  bgColor: (theme: DefaultTheme, bgColor: 'primary' | 'secondary') => css`
-    background-color: ${theme.colors[bgColor]};
-  `,
   fullWidth: () => css`
     width: 100%;
   `,
@@ -74,16 +68,16 @@ export const Button = styled.button<ButtonStyledProps>`
     align-items: center;
     justify-content: center;
     transition: 0.2s ease-out;
+    color: ${theme.colors[color]};
+    background-color: ${theme.colors[bgColor]};
 
     &:hover {
       background-color: ${darken(0.2, theme.colors[bgColor])};
     }
 
     ${!!size && buttonModifiers[size](theme)}
-    ${!!color && buttonModifiers.color(theme, color)}
-    ${!!bgColor && buttonModifiers.bgColor(theme, bgColor)}
-    ${!!fullWidth && buttonModifiers.fullWidth()}
-    ${!!minimal && buttonModifiers.minimal(theme, bgColor, color)}
-    ${!!hasIcon && buttonModifiers.icon(theme, iconPosition)}
+    ${fullWidth && buttonModifiers.fullWidth()}
+    ${minimal && buttonModifiers.minimal(theme, bgColor, color)}
+    ${hasIcon && buttonModifiers.icon(theme, iconPosition)}
   `}
 `

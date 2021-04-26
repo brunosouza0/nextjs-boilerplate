@@ -40,7 +40,7 @@ const Button: React.ForwardRefRenderFunction<HTMLButtonElement | HTMLAnchorEleme
     hasIcon={!!icon}
     {...props}>
     {!!icon && icon}
-    <span>{children}</span>
+    {children}
   </S.Button>
 )
 
