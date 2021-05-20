@@ -3,7 +3,7 @@ import { Story, Meta } from '@storybook/react/types-6-0'
 import Checkbox, { CheckboxProps } from '.'
 
 export default {
-  title: 'Checkbox',
+  title: 'Input/Checkbox',
   component: Checkbox,
   argTypes: {
     onCheck: { action: 'check' }

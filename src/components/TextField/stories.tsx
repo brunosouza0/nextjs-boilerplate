@@ -5,7 +5,7 @@ import { Password } from '@styled-icons/material-outlined'
 import TextField, { TextFieldProps } from '.'
 
 export default {
-  title: 'TextField',
+  title: 'Input/TextField',
   component: TextField,
   args: {
     label: 'Label',

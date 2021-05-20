@@ -13,6 +13,7 @@ export type ButtonProps = {
   icon?: React.ReactNode
   iconPosition?: 'left' | 'right'
   as?: React.ElementType
+  children: React.ReactNode
 } & ButtonTypes
 
 const Button: React.ForwardRefRenderFunction<HTMLButtonElement | HTMLAnchorElement, ButtonProps> = (
