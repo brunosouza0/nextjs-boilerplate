@@ -21,7 +21,7 @@ const Modal = ({ isOpen, setIsOpen, children }: ModalProps) => {
   }, [setIsOpen])
 
   return (
-    <S.Wrapper isOpen={isOpen} aria-hidden={isOpen} onClick={() => setIsOpen(!isOpen)}>
+    <S.Wrapper isOpen={isOpen} aria-hidden={isOpen}>
       <S.Shadow onClick={() => setIsOpen(!isOpen)} />
 
       <S.Content>

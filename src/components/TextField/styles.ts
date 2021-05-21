@@ -102,6 +102,10 @@ export const Wrapper = styled.div<WrapperProps>`
     `}
 
     ${error && wrapperModifiers.error(theme)}
+
+@media(max-width: ${theme.breakpoint.small}) {
+      min-width: 28rem;
+    }
   `}
 `
 

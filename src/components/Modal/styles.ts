@@ -64,6 +64,10 @@ export const Content = styled.div`
         transform: translateY(0px);
       }
     }
+
+    @media (max-width: ${theme.breakpoint.medium}) {
+      width: 100%;
+    }
   `}
 `
 
