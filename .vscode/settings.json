@@ -1,0 +1,19 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Night Owl",
+
+  "editor.fontFamily": "Operator Mono Lig, Menio, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+  "editor.colorDecorators": false,
+
+  "colorize.languages": [
+    "javascript",
+    "typescript"
+  ]
+}
+
