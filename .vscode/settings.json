@@ -1,4 +1,11 @@
 {
+  "terminal.integrated.profiles.windows": {
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe"
+    }
+  },
+  //"terminal.integrated.defaultProfile.windows": "Git Bash",  --This setting can be applied only in application user settings
+
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "Night Owl",
 
