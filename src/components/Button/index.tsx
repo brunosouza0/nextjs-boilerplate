@@ -1,4 +1,4 @@
-import { forwardRef, AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, forwardRef } from 'react'
 
 import * as S from './styles'
 

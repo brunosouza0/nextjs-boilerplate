@@ -1,4 +1,5 @@
-import { useState, InputHTMLAttributes } from 'react'
+import { InputHTMLAttributes, useState } from 'react'
+
 import * as S from './styles'
 
 export type TextFieldProps = {

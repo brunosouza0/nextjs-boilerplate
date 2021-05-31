@@ -1,7 +1,7 @@
-import { Story, Meta } from '@storybook/react/types-6-0'
+import { Meta, Story } from '@storybook/react/types-6-0'
+import { FavoriteBorder } from '@styled-icons/material-outlined'
 
 import Button, { ButtonProps } from '.'
-import { FavoriteBorder } from '@styled-icons/material-outlined'
 
 export default {
   title: 'Button',

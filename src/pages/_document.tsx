@@ -1,6 +1,5 @@
-import Document, { DocumentContext, Html, Head, Main, NextScript } from 'next/document'
+import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-
 import theme from 'styles/theme'
 
 const isProd = process.env.NODE_ENV === 'production'
