@@ -16,8 +16,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es2021: true,
-    jest: true
+    es2021: true
   },
   extends: [
     'eslint:recommended',
@@ -29,7 +28,9 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended' // Make sure this is always the last element in the array.
   ],
+  plugins: ['simple-import-sort'],
   rules: {
+    'simple-import-sort/imports': 'error',
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',

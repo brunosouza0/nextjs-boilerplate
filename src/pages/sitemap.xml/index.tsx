@@ -1,5 +1,5 @@
-import { getServerSideSitemap } from 'next-sitemap'
 import { GetServerSideProps } from 'next'
+import { getServerSideSitemap } from 'next-sitemap'
 
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const fields = []

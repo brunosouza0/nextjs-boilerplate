@@ -1,5 +1,4 @@
-import { Story, Meta } from '@storybook/react/types-6-0'
-
+import { Meta, Story } from '@storybook/react/types-6-0'
 import { Password } from '@styled-icons/material-outlined'
 
 import TextField, { TextFieldProps } from '.'

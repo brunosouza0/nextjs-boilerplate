@@ -48,11 +48,6 @@ module.exports = function (plop) {
               type: 'add',
               path: '../src/templates/{{pascalCase name}}/styles.ts',
               templateFile: 'templates/styles.ts.hbs'
-            },
-            {
-              type: 'add',
-              path: '../src/templates/{{pascalCase name}}/test.tsx',
-              templateFile: 'templates/test.tsx.hbs'
             }
           ]
       }

@@ -1,4 +1,5 @@
 import { Dispatch, SetStateAction, useEffect } from 'react'
+
 import * as S from './styles'
 
 export type ModalProps = {

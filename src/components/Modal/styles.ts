@@ -1,8 +1,7 @@
+import { Close } from '@styled-icons/material-outlined'
 import styled, { css } from 'styled-components'
 
 import { ModalProps } from '.'
-
-import { Close } from '@styled-icons/material-outlined'
 
 type WrapperProps = Pick<ModalProps, 'isOpen'>
 
