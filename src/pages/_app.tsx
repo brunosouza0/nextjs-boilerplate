@@ -1,5 +1,3 @@
-import 'styles/_app.css'
-
 import { AppProps } from 'next/app'
 import { DefaultSeo } from 'next-seo'
 import NextNprogress from 'nextjs-progressbar'
