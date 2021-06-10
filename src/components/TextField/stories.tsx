@@ -1,5 +1,4 @@
 import { Meta, Story } from '@storybook/react/types-6-0'
-import { Password } from '@styled-icons/material-outlined'
 
 import TextField, { TextFieldProps } from '.'
 
@@ -7,20 +6,22 @@ export default {
   title: 'Input/TextField',
   component: TextField,
   args: {
-    label: 'Label',
-    labelColor: 'white'
+    placeholder: 'E-mail',
+    type: 'email'
   },
-  parameters: {
-    backgrounds: { default: 'dark' }
-  },
-  argTypes: {
-    icon: { control: { type: false } }
-  }
+  parameters: { backgrounds: { default: 'dark' } }
 } as Meta<TextFieldProps>
 
 const Template: Story<TextFieldProps> = (args) => <TextField {...args} />
 
-export const Default = Template.bind({})
+export const Default: Story<TextFieldProps> = Template.bind({})
 
-export const withIcon = Template.bind({})
-withIcon.args = { icon: <Password />, type: 'password', label: 'Password' }
+export const WithError: Story<TextFieldProps> = Template.bind({})
+WithError.args = {
+  label: 'E-mail',
+  labelFor: 'textfield',
+  labelColor: 'white',
+  bgColor: 'darkGray',
+  error: 'e-mail já cadastrado',
+  initialValue: 'email@email.com'
+}

@@ -5,10 +5,10 @@ import * as S from './styles'
 export type TextFieldProps = {
   onInput: (value: string) => void
   label?: string
+  labelFor?: string
   labelColor?: 'black' | 'white'
+  bgColor?: 'darkGray' | 'white'
   initialValue?: string
-  icon?: React.ReactNode
-  disabled?: boolean
   error?: string
   fullWidth?: boolean
 } & InputHTMLAttributes<HTMLInputElement>
@@ -16,10 +16,10 @@ export type TextFieldProps = {
 const TextField = ({
   onInput,
   label,
+  labelFor,
   labelColor = 'black',
+  bgColor = 'white',
   initialValue = '',
-  icon,
-  disabled = false,
   error,
   fullWidth = false,
   ...props
@@ -32,20 +32,21 @@ const TextField = ({
   }
 
   return (
-    <S.Wrapper disabled={disabled} error={!!error} fullWidth={fullWidth}>
-      <S.InputWrapper label={!!label}>
-        <S.Input
-          type="text"
-          labelColor={labelColor}
-          disabled={disabled}
-          value={value}
-          onChange={(e) => handleChange(e.target.value)}
-          {...props}
-        />
-        {!!label && <S.Label>{label}</S.Label>}
-        {!!icon && <S.Icon>{icon}</S.Icon>}
-      </S.InputWrapper>
-
+    <S.Wrapper fullWidth={fullWidth}>
+      {!!label && (
+        <S.Label htmlFor={labelFor} labelColor={labelColor}>
+          {label}
+        </S.Label>
+      )}
+      <S.Input
+        id={labelFor}
+        type="rext"
+        bgColor={bgColor}
+        value={value}
+        onChange={(e) => handleChange(e.target.value)}
+        error={!!error}
+        {...props}
+      />
       {!!error && <S.Error>{error}</S.Error>}
     </S.Wrapper>
   )

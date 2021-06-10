@@ -13,13 +13,12 @@ export const Wrapper = styled.div<WrapperProps>`
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: ${theme.layers.modal};
+    z-index: ${theme.layers.overlay};
     transition: opacity 0.3s ease-out;
     overflow: auto;
 
     animation-name: Fade;
     animation-duration: 0.4s;
-    backface-visibility: hidden;
 
     @keyframes Fade {
       0% {
@@ -47,7 +46,7 @@ export const Content = styled.div`
     min-height: 26rem;
     background-color: ${theme.colors.lightBg};
     border-radius: ${theme.border.radius};
-    z-index: ${theme.layers.alwaysOnTop};
+    z-index: ${theme.layers.modal};
     position: relative;
     padding: ${theme.spacings.xsmall};
     margin: 3rem auto 0;
