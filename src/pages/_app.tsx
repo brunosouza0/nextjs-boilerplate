@@ -5,16 +5,12 @@ import { ThemeProvider } from 'styled-components'
 import GlobalStyle from 'styles/global'
 import theme from 'styles/theme'
 
+import SEO from '../../next-seo.config'
+
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <DefaultSeo
-        openGraph={{
-          type: 'website',
-          locale: 'pt-BR',
-          site_name: 'Next.js Boilerplate'
-        }}
-      />
+      <DefaultSeo {...SEO} />
       <NextNprogress color={theme.colors.primary} startPosition={0.3} stopDelayMs={200} height={3} />
       <ThemeProvider theme={theme}>
         <GlobalStyle />

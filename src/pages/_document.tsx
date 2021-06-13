@@ -1,8 +1,7 @@
+import Analytics from 'components/Analytics'
 import Document, { DocumentContext, Head, Html, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 import theme from 'styles/theme'
-
-const isProd = process.env.NODE_ENV === 'production'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext) {
@@ -38,27 +37,11 @@ export default class MyDocument extends Document {
           <link rel="apple-touch-icon" href="/img/icon-512.png" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content={theme.colors.primary} />
-          {isProd && (
-            <>
-              <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING}`} />
-              <script
-                dangerouslySetInnerHTML={{
-                  __html: `
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${process.env.GA_TRACKING}', {
-                  page_path: window.location.pathname
-                });
-              `
-                }}
-              />
-            </>
-          )}
         </Head>
         <body>
           <Main />
           <NextScript />
+          <Analytics />
         </body>
       </Html>
     )
